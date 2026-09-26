@@ -1,4 +1,5 @@
 // swift-tools-version: 5.9
+
 import PackageDescription
 
 let package = Package(
@@ -13,8 +14,13 @@ let package = Package(
         )
     ],
     targets: [
+        .binaryTarget(
+            name: "PlaygroundProbe",
+            path: "PlaygroundProbe.xcframework"
+        ),
         .target(
-            name: "PlaygroundProbePackage"
+            name: "PlaygroundProbePackage",
+            dependencies: ["PlaygroundProbe"]
         )
     ]
 )

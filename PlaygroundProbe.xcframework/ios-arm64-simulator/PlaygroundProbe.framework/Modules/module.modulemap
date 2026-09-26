@@ -1,0 +1,5 @@
+framework module PlaygroundProbe {
+    umbrella header "PlaygroundProbe.h"
+    export *
+    module * { export * }
+}
