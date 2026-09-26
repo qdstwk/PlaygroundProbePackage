@@ -10,17 +10,19 @@ let package = Package(
     products: [
         .library(
             name: "PlaygroundProbePackage",
-            targets: ["PlaygroundProbePackage"]
+            targets: [
+                "PlaygroundProbePackage",
+                "PlaygroundProbe"
+            ]
         )
     ],
     targets: [
+        .target(
+            name: "PlaygroundProbePackage"
+        ),
         .binaryTarget(
             name: "PlaygroundProbe",
             path: "PlaygroundProbe.xcframework"
-        ),
-        .target(
-            name: "PlaygroundProbePackage",
-            dependencies: ["PlaygroundProbe"]
         )
     ]
 )
